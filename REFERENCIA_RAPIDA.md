@@ -21,18 +21,7 @@
 
 ```json
 {
-  // Habilitar/Desabilitar Copilot globalmente
-  "github.copilot.enable": {
-    "*": true
-  },
-  
-  // Habilitar sugestões inline
-  "editor.inlineSuggest.enabled": true,
-  
-  // Habilitar autocompletações
-  "github.copilot.editor.enableAutoCompletions": true,
-  
-  // Configurar por linguagem
+  // Habilitar/Desabilitar Copilot por linguagem
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -42,6 +31,12 @@
     "java": true,
     "yaml": false
   },
+  
+  // Habilitar sugestões inline
+  "editor.inlineSuggest.enabled": true,
+  
+  // Habilitar autocompletações
+  "github.copilot.editor.enableAutoCompletions": true,
   
   // Sugestões rápidas
   "editor.quickSuggestions": {

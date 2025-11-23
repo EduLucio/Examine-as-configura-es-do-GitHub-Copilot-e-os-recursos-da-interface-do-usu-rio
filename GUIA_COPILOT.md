@@ -24,10 +24,11 @@ O GitHub Copilot é um assistente de programação baseado em IA que oferece sug
 ### 2.1 Configurações Básicas
 
 #### **GitHub Copilot: Enable**
-- **Descrição**: Ativa ou desativa o GitHub Copilot globalmente
-- **Tipo**: Boolean
+- **Descrição**: Ativa ou desativa o GitHub Copilot globalmente ou por linguagem
+- **Tipo**: Boolean ou Object
 - **Padrão**: `true`
 - **Configuração**: `github.copilot.enable`
+- **Nota**: Pode ser um valor booleano simples (`true`/`false`) ou um objeto para configuração por linguagem
 
 #### **GitHub Copilot: Enable Auto Completions**
 - **Descrição**: Habilita sugestões automáticas de código
@@ -167,9 +168,13 @@ Para personalizar completamente o GitHub Copilot, edite o arquivo `settings.json
 
 ```json
 {
-  // Habilitar Copilot
+  // Habilitar Copilot por linguagem
   "github.copilot.enable": {
-    "*": true
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "javascript": true,
+    "python": true
   },
   
   // Configurações do editor
@@ -178,13 +183,6 @@ Para personalizar completamente o GitHub Copilot, edite o arquivo `settings.json
     "other": true,
     "comments": false,
     "strings": true
-  },
-  
-  // Desabilitar para linguagens específicas
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": false
   },
   
   // Configurações avançadas
