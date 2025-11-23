@@ -1,0 +1,1 @@
+# Examine-as-configura-es-do-GitHub-Copilot-e-os-recursos-da-interface-do-usu-rio
